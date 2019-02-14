@@ -1,0 +1,7 @@
+# Dev/Deployment
+numpy
+scipy
+matplotlib
+scikit-image
+h5py==2.9.0
+xarray
