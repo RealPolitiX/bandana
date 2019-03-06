@@ -1,9 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 """
-@authors: Christopher Sutton, R. Patrick Xian
+@authors: R. Patrick Xian, Christopher Sutton
 """
 
 import numpy as np
