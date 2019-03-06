@@ -1,2 +1,2 @@
 # bandana
-Electronic band structure visualization
+Multidimensional electronic band structure visualization
