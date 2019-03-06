@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -33,7 +33,7 @@ setup(
     keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
-    author='R. Patrick Xian', 'Christopher Sutton',
+    author=['R. Patrick Xian', 'Christopher Sutton'],
     install_requires=install_requires,
     dependency_links=dependency_links,
     author_email='xrpatrick@gmail.com'
