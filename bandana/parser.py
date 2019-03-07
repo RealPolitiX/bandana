@@ -64,8 +64,16 @@ def parse_homo_lumo(path):
     return n_HOMO, n_LUMO
 
 
-def parse_bands(files, nhomo, nend=None):
+def parse_bands(files, band_id, nend=None):
     """ Parse the energy bands from the `bandxxxx.out` files.
+
+    :Parameters:
+        files : list
+            List of band energy files.
+        band_id : int
+            Band index.
+        nend : int | None
+            Ending index of the energy band values.
     """
 
     band = []
@@ -73,8 +81,8 @@ def parse_bands(files, nhomo, nend=None):
 
     for i_band, filename in enumerate(files):
         data = np.loadtxt(filename)
-        y = data[0:nend, nhomo]
-        y = y/27.2113845  # change energy from eV to a.u.
+        y = data[0:nend, band_id]
+        y = y / 27.2113845  # change energy from eV to a.u.
         band.append(y)
 
     band = np.asarray(band)
