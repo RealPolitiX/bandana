@@ -91,7 +91,7 @@ def parse_bands(files, band_id, nend=None):
 
 
 def sympad(matrix, pads=None, prerow=0, postrow=0, precol=0, postcol=0,
-            mode='reflect', reftype='even'):
+            mode='reflect', **kwargs):
     """ Symmetrically padding the 2D matrix.
 
     :Parameters:
@@ -109,8 +109,8 @@ def sympad(matrix, pads=None, prerow=0, postrow=0, precol=0, postcol=0,
 
     if pads is None:
         matpad = np.pad(matrix, ((prerow, postrow), (precol, postcol)),
-                        mode=mode, reflect_type=reftype)
+                        mode=mode, **kwargs)
     else:
-        matpad = np.pad(matrix, pads, mode=mode, reflect_type=reftype)
+        matpad = np.pad(matrix, pads, mode=mode, **kwargs)
 
     return matpad
